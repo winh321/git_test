@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c3eb44eec5.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <h2 id="header-text">Alert Box Page</h2>
+    <hr>
+    <header>
+        <nav>
+            <ul>
+                <li><a onclick="alert_click()" id="alert_box" href="#" class="active">Alert Box</a></li>
+                <li><a onclick="todo_click()"  id="todo" href="#">Todo</a></li>
+                <li><a onclick="form_click()"  id="form" href="#">Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="alert_box_screen">
+        <button onclick="open_dialog()">Open dialog</button>
+    </section>
+
+    <div id="black_screen" class="black_back">
+    </div>
+    
+    <div id="alert_screen" class="alert_message">
+        <div class="card">
+            <h4 class="card_title">
+                Payment Successful
+            </h4>
+            <p>
+                Your Payment has been successfully submitted. We've sent <br>
+                you an email with all of the details of your order.
+            </p>
+            <button onclick="close_dialog()">Go it, thanks!</button>
+        </div>
+    </div>
+
+    <section id="todo_screen">
+        <div>
+            <h3>Todo App</h3>
+            <input type="text" id="search_data" oninput="filter_data(search_data.value)" placeholder="Search Todo"> <br>
+            <div id="data_show">
+
+            </div>
+            <input id="get_data" type="text" placeholder="Enter new Todo"> <br>
+            <button onclick="add_data(get_data.value)">Add Todo</button>
+        </div>
+    </section>
+
+    <section id="form_screen">
+        <div>
+
+            <h3>Login</h3>
+            <form id="myform" action="/" method="get">
+
+                <label> Name <br>
+                    <input size="40" id="name" name="name" type="text">
+                </label> <br> <span id="name_error"> name must include a lower case letter <br> and a number </span>
+                <br><br>
+
+                <label>Email <br>
+                    <input size="40" id="email" name="email" type="text">
+                </label> <br> <span id="email_error"> invalid email format </span>
+                <br><br>
+
+                <label>Password <br>
+                    <input size="40" id="password" name="password" type="text">
+                </label> <br> <span id="password_error"> Password must be at least 6 characters </span> 
+                <br><br>
+
+                <button type="submit">Login</button>
+
+            </form>
+        </div>
+    </section>
+
+
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
